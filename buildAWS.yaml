@@ -8,17 +8,16 @@ phases:
   install:
     commands:
       - echo Installing APP...
-      - npm i -g serve
-      - npm install
+      - npm i -g serve      
 pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm build
+      - npm install
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
-      - serve -s build
+      - npm run build
   post_build:
     commands:
       - echo Build completed on `date`
